@@ -35,9 +35,9 @@ a{color:inherit}
 
 /* Encabezado */
 .top{border-bottom:1px solid var(--plata);background:var(--blanco);position:sticky;top:0;z-index:20}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.15rem}
-.marca img{height:38px;width:38px;border-radius:50%;object-fit:cover}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.65rem}
+.marca img{height:44px;width:44px;border-radius:50%;object-fit:cover}
 .ig{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 14px;border:1px solid var(--plata);border-radius:999px;transition:border-color .2s,background .2s}
 .ig:hover{border-color:var(--tinta);background:var(--plata)}
 .ig svg{width:18px;height:18px}
@@ -66,7 +66,7 @@ section{padding:clamp(56px,8vw,96px) 0}
 h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.5vw,3rem);letter-spacing:-.02em;line-height:1.05;max-width:18ch}
 .intro{margin-top:14px;color:var(--gris);max-width:52ch}
 
-/* Servicios: lista con filas, no tarjetas */
+/* Servicios: lista con filas */
 .servicios{background:var(--plata)}
 .lista{margin-top:44px;border-top:2px solid var(--tinta)}
 .fila{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:8px 40px;padding:26px 0;border-bottom:1px solid #c9cdd2;transition:padding-left .25s}
@@ -74,7 +74,7 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.5vw,3rem)
 .fila h3{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
 .fila p{color:var(--gris);max-width:60ch}
 
-/* Proceso: es una secuencia, por eso va numerado */
+/* Proceso: secuencia numerada */
 .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:44px;list-style:none;counter-reset:p}
 .pasos li{counter-increment:p;border-top:3px solid var(--tinta);padding-top:16px}
 .pasos li::before{content:counter(p);font-family:var(--display);font-weight:900;font-size:2.4rem;color:var(--tinta);line-height:1}
@@ -164,11 +164,38 @@ footer iframe{width:100%;height:230px;border:0;border-radius:6px}
       <h2>Lo que hacemos por tu vehículo</h2>
       <p class="intro">Cada trabajo se adapta al estado de tu auto. Te asesoramos antes de empezar.</p>
       <div class="lista">
-        <div class="fila"><h3>Lavado premium</h3><p>Lavado exterior a mano, descontaminado de la pintura, llantas, gomas y vidrios. Sin rayones ni marcas de lavado.</p></div>
-        <div class="fila"><h3>Pulido y corrección de pintura</h3><p>Eliminamos rayas finas, opacidad y remolinos para devolverle profundidad y brillo a la pintura.</p></div>
-        <div class="fila"><h3>Protección cerámica</h3><p>Una capa que protege del sol, la tierra y el agua, y hace que el lavado de todos los días sea mucho más fácil.</p></div>
-        <div class="fila"><h3>Detailing interior</h3><p>Aspirado profundo, limpieza de tapizados, cuero y plásticos, y eliminación de olores.</p></div>
-        <div class="fila"><h3>Ópticas y detalles</h3><p>Recuperamos faros opacos, molduras y cromados para que todo el auto se vea parejo.</p></div>
+        <div class="fila">
+          <h3>Lavado de mantenimiento</h3>
+          <p>Lavado exterior e interior minucioso, ideal para la conservación habitual del vehículo, finalizado con el embellecimiento de cubiertas.</p>
+        </div>
+        <div class="fila">
+          <h3>Lavado premium</h3>
+          <p>Limpieza profunda de exterior e interior. Incluye lavado de llantas, acondicionamiento general y aplicación de cera hidrofóbica para un brillo superior.</p>
+        </div>
+        <div class="fila">
+          <h3>Lavado de interiores</h3>
+          <p>Aspirado profundo y limpieza especializada de tapizados. Incluye extracción de manchas y eliminación efectiva de olores persistentes.</p>
+        </div>
+        <div class="fila">
+          <h3>Abrillantado</h3>
+          <p>Pulido de una sola etapa para eliminar micro-rayas superficiales, devolviendo el brillo original y eliminando la opacidad de la pintura.</p>
+        </div>
+        <div class="fila">
+          <h3>Pulido y corrección de rayas</h3>
+          <p>Tratamiento avanzado para eliminar rayas profundas, hologramas y marcas severas, restaurando la perfección de la pintura.</p>
+        </div>
+        <div class="fila">
+          <h3>Protección cerámica</h3>
+          <p>Recubrimiento que otorga un brillo extremo, efecto hidrofóbico y protección duradera contra los elementos.</p>
+        </div>
+        <div class="fila">
+          <h3>Reacondicionamiento de ópticas</h3>
+          <p>Restauración de faros opacos o dañados por el sol. Incluye lijado, pulido y protección UV para recuperar la transparencia y la visión nocturna.</p>
+        </div>
+        <div class="fila">
+          <h3>Pintura de llantas</h3>
+          <p>Lijado y pintura especializada para reparar imperfecciones y renovar por completo la estética de las llantas.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -177,10 +204,22 @@ footer iframe{width:100%;height:230px;border:0;border-radius:6px}
     <div class="wrap">
       <h2>Así trabajamos</h2>
       <ol class="pasos">
-        <li><h3>Nos escribís</h3><p>Nos contás qué auto tenés y qué necesitás. Te pasamos opciones y valores.</p></li>
-        <li><h3>Revisamos el auto</h3><p>Evaluamos el estado de la pintura y el interior antes de tocar nada.</p></li>
-        <li><h3>Trabajamos con cuidado</h3><p>Aplicamos el servicio con productos y herramientas profesionales.</p></li>
-        <li><h3>Entrega</h3><p>Repasamos el resultado juntos y te damos consejos para mantenerlo.</p></li>
+        <li>
+          <h3>Nos escribís</h3>
+          <p>Nos contás qué vehículo tenés y qué trabajo te gustaría realizar para que te podamos dar una cotización.</p>
+        </li>
+        <li>
+          <h3>Coordinamos el turno</h3>
+          <p>Si aceptás el presupuesto, te asignamos un turno y te indicamos el tiempo estimado que nos llevará el trabajo.</p>
+        </li>
+        <li>
+          <h3>Trabajamos en tu auto</h3>
+          <p>Aplicamos el servicio solicitado con dedicación, utilizando productos y herramientas profesionales para cuidar cada detalle.</p>
+        </li>
+        <li>
+          <h3>Entrega</h3>
+          <p>Te entregamos el vehículo en tiempo y forma, cumpliendo con todo lo pactado.</p>
+        </li>
       </ol>
     </div>
   </section>
